@@ -154,7 +154,7 @@ function easyFunAndroidEmulator() {
 
 document.addEventListener("DOMContentLoaded", function() {
     const allowedSites = ["document.addEventListener("DOMContentLoaded", function() {
-    const allowedSites = ["yourdomain.com", "trusted-site.com"]; // Add allowed sites here
+    const allowedSites = ["greys2121.github.io/dassadsda/", "trusted-site.com"]; // Add allowed sites here
 
     try {
         if (window.top !== window.self) { // Detect if in an iframe
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (!allowed) {
                 // Show fullscreen warning
                 document.getElementById("embed-warning").style.display = "flex";
-                document.getElementById("visit-site").href = window.location.href; // Set link
+                document.getElementById("greys2121.github.io/dassadsda/").href = window.location.href; // Set link
             }
         }
     } catch (e) {
