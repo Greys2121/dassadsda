@@ -153,7 +153,7 @@ function easyFunAndroidEmulator() {
     window.location.replace(EmulatorUrl);
 
 document.addEventListener("DOMContentLoaded", function() {
-    const allowedSites = ["https://onecompiler.com/html/438wnjd4y", "trusted-site.com"]; // Add allowed sites here
+    const allowedSites = ["https://greys2121.github.io/dassadsda/", "trusted-site.com"]; // Add allowed sites here
 
     if (window.top !== window.self) { // Detect if in an iframe
         const referrer = document.referrer;
