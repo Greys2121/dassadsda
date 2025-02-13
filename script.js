@@ -153,17 +153,43 @@ function easyFunAndroidEmulator() {
     window.location.replace(EmulatorUrl);
 
 document.addEventListener("DOMContentLoaded", function() {
-    const allowedSites = ["https://greys2121.github.io/dassadsda/", "trusted-site.com"]; // Add allowed sites here
+    const allowedSites = ["document.addEventListener("DOMContentLoaded", function() {
+    const allowedSites = ["yourdomain.com", "trusted-site.com"]; // Add allowed sites here
 
-    if (window.top !== window.self) { // Detect if in an iframe
-        const referrer = document.referrer;
-        let allowed = allowedSites.some(site => referrer.includes(site));
+    try {
+        if (window.top !== window.self) { // Detect if in an iframe
+            const referrer = document.referrer || ""; // Get referrer (may be empty)
+            let allowed = allowedSites.some(site => referrer.includes(site));
 
-        if (!allowed) {
-            const warning = document.getElementById("embed-warning");
-            warning.style.display = "flex"; // Show fullscreen warning
-            document.getElementById("visit-site").href = window.location.href; // Set link
+            if (!allowed) {
+                // Show fullscreen warning
+                document.getElementById("embed-warning").style.display = "flex";
+                document.getElementById("visit-site").href = window.location.href; // Set link
+            }
         }
+    } catch (e) {
+        // If there's a security error (like cross-origin iframe restrictions), block it
+        document.getElementById("embed-warning").style.display = "flex";
+        document.getElementById("visit-site").href = window.location.href;
+    }
+});
+", "trusted-site.com"]; // Add allowed sites here
+
+    try {
+        if (window.top !== window.self) { // Detect if in an iframe
+            const referrer = document.referrer || ""; // Get referrer (may be empty)
+            let allowed = allowedSites.some(site => referrer.includes(site));
+
+            if (!allowed) {
+                // Show fullscreen warning
+                document.getElementById("embed-warning").style.display = "flex";
+                document.getElementById("visit-site").href = window.location.href; // Set link
+            }
+        }
+    } catch (e) {
+        // If there's a security error (like cross-origin iframe restrictions), block it
+        document.getElementById("embed-warning").style.display = "flex";
+        document.getElementById("visit-site").href = window.location.href;
     }
 });
 
